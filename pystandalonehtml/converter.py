@@ -6,6 +6,8 @@ from bs4 import BeautifulSoup
 #Testing CI/CD
 
 def guess_type(filepath):
+
+    print("Testing CI/CD")
     """
     Return the mimetype of a file, given it's path.
     :type filepath: str
