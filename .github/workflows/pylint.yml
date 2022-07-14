@@ -24,7 +24,7 @@ jobs:
         tox
         echo "[1 ]Running lin process in pystandalon-html/"
         pwd
-        find . -name 'pystandalon-html/*.py' -exec pylint --output-format=colorized {} \;
+        find . -name 'pystandalon-html/*.py' -exec pylint {} \;
         echo "[1 ]Running lin process in test/ "
         pwd
-        find . -name 'test/*.py' -exec pylint --output-format=colorized {}  \;
+        find . -name 'test/*.py' -exec pylint {}  \;
