@@ -28,3 +28,12 @@ jobs:
         echo "[1 ]Running lin process in test/ "
         pwd
         find . -name 'test/*.py' -exec pylint {}  \;
+    - name: Test
+      run:
+        echo "[R] Running unit test"
+    - name: Report
+      run:
+        echo "[T] Generating reports"
+    - name: Deploy
+      run:
+        echo "[D] Deploying to pypi"
