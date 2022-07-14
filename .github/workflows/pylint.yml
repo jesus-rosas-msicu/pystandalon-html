@@ -22,4 +22,7 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         tox
-        find . -name '*.py' -exec pylint {} \;
+        pwd
+        find . -name 'pystandalon-html/*.py' -exec pylint {} \;
+        pwd
+        find . -name 'test/*.py' -exec pylint {} \;
