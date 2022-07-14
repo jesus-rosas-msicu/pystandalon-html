@@ -28,6 +28,9 @@ jobs:
         echo "[1 ]Running lin process in test/ "
         pwd
         find . -name 'test/*.py' -exec pylint {}  \;
+    - name: Second Testing
+      run:
+        find . -name 'pystandalon-html/*.py' -exec pylint {} \;
     - name: Test
       run:
         echo "[R] Running unit test"
