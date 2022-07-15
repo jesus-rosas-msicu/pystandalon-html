@@ -1,4 +1,3 @@
-"Files that converts a file from an image"
 import os
 import urllib.request
 import base64
@@ -7,6 +6,8 @@ from bs4 import BeautifulSoup
 #Testing CI/CD
 
 def guess_type(filepath):
+
+    print("Testing CI/CD")
     """
     Return the mimetype of a file, given it's path.
     :type filepath: str
@@ -24,8 +25,8 @@ def file_to_base64(filepath):
     :return: The file content, Base64 encoded.
     :rtype: str
     """
-    with open(filepath, 'rb',encoding="utf-8") as file:
-        encoded_str = base64.b64encode(file.read())
+    with open(filepath, 'rb') as f:
+        encoded_str = base64.b64encode(f.read())
     return encoded_str.decode()
 
 def url_to_base64(url):
@@ -41,10 +42,12 @@ def url_to_base64(url):
     return encoded_str.decode()
 
 
-def splitme(string):
-    "Splits a string"
-    if string[0] == "\\":
-        return string[1:]
+def splitme(s):
+    if (s[0] == "\\"):
+        return s[1:]
+    else: 
+        return(s)
+
 
 def make_html_images_inline(in_filepath, out_filepath):
     """
@@ -56,9 +59,7 @@ def make_html_images_inline(in_filepath, out_filepath):
     :type out_filepath: str
     """
     basepath = os.path.split(in_filepath.rstrip(os.path.sep))[0]
-    #soup = BeautifulSoup(open(in_filepath, 'r',encoding="utf-8"), 'html.parser')
-    soup = BeautifulSoup(open(in_filepath, 'r',encoding="utf-8"), 'html.parser')
-
+    soup = BeautifulSoup(open(in_filepath, 'r'), 'html.parser')
     for img in soup.find_all('img'):
         img_path = os.path.join(basepath, img.attrs['src'])
         mimetype = guess_type(img_path)
@@ -68,6 +69,7 @@ def make_html_images_inline(in_filepath, out_filepath):
         elif not src.startswith('data'):
             print(src)
             img.attrs['src'] = "data:%s;base64,%s" % (mimetype, file_to_base64(src))
+        
 
-    with open(out_filepath, 'w',encoding="utf-8") as file:
-        file.write(str(soup))
+    with open(out_filepath, 'w') as of:
+        of.write(str(soup))

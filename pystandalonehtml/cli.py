@@ -1,4 +1,5 @@
 """
+https://pylint.pycqa.org/en/latest/user_guide/messages/convention/missing-function-docstring.html
 Usage:
     toStandalone (<input_file.html> <output_file.html>)
     toStandalone -h|--help
@@ -12,8 +13,8 @@ Options:
 from docopt import docopt
 from .converter import make_html_images_inline
 
-
 def main():
+    """Main Function of the code."""
     arguments = docopt(__doc__, version='0.0.1')
     input = arguments['<input_file.html>']
     output = arguments['<output_file.html>']
