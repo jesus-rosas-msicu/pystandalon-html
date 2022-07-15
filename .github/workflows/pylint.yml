@@ -20,18 +20,17 @@ jobs:
         pip install tox
         pip install pylint
     - name: Analysing the code with pylint
-      run: |
+      run:  |
         tox
         echo "[1 ]Running lint process in pystandalonehtml/"
-        pylint .
     - name: Second Testing
-      run:
+      run:  |
         find . -name 'pystandalonehtml/*.py' -exec pylint {} \;
     - name: Test
-      run:
+      run:  |
         echo "[R] Running unit test"
     - name: Report
-      run:
+      run:  |
         echo "[T] Generating reports"
     - name: Deploy
       run:
