@@ -22,12 +22,10 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         tox
-        echo "[1 ]Running lin process in pystandalon-html/"
-        pwd
-        find . -name 'pystandalon-html/*.py' -exec pylint {} \;
-        echo "[1 ]Running lin process in test/ "
-        pwd
-        find . -name 'test/*.py' -exec pylint {}  \;
+        echo "[1 ]Running lint process in pystandalon-html/"
+        pylint pystandalon-html/*.py
+        echo "[1 ]Running lint process in test/"
+        pylint 'test/*.py'
     - name: Second Testing
       run:
         find . -name 'pystandalon-html/*.py' -exec pylint {} \;
