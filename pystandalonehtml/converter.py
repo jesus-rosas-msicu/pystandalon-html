@@ -65,10 +65,14 @@ def make_html_images_inline(in_filepath, out_filepath):
         mimetype = guess_type(img_path)
         src = splitme(img.attrs['src'])
         if src.startswith('http') or src.startswith('file:'):
-            img.attrs['src'] = "data:%s;base64,%s" % (mimetype, url_to_base64(src))
+            #img.attrs['src'] = "data:%s;base64,%s" % (mimetype, url_to_base64(src))
+            data = (mimetype, file_to_base64(src))
+            img.attrs['src'] = f"{data[0] and data[1]}"
         elif not src.startswith('data'):
             print(src)
-            img.attrs['src'] = "data:%s;base64,%s" % (mimetype, file_to_base64(src))
+            #img.attrs['src'] = "data:%s;base64,%s" % (mimetype, file_to_base64(src))
+            data = (mimetype, file_to_base64(src))
+            img.attrs['src'] = f"{data[0] and data[1]}"
 
     with open(out_filepath, 'w',encoding="utf-8") as file:
         file.write(str(soup))
