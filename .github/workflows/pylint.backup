@@ -1,3 +1,6 @@
 https://stackoverflow.com/questions/67799446/pylint3-variable-name-fl-doesnt-conform-to-snake-case-naming-style-invalid-n
 https://pylint.pycqa.org/en/latest/user_guide/messages/warning/unspecified-encoding.html
 https://www.learnbyexample.org/python-open-function/
+https://pylint.pycqa.org/en/latest/user_guide/messages/convention/trailing-whitespace.html
+https://pylint.pycqa.org/en/latest/user_guide/messages/convention/superfluous-parens.html
+https://pylint.pycqa.org/en/latest/user_guide/messages/refactor/consider-using-with.html

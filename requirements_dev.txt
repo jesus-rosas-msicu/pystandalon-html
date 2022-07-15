@@ -14,3 +14,5 @@ codecov
 autoflake
 pylint
 jedi
+bs4
+docopt
