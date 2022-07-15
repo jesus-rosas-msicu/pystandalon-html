@@ -16,6 +16,6 @@ from .converter import make_html_images_inline
 def main():
     """Main Function of the code."""
     arguments = docopt(__doc__, version='0.0.1')
-    input = arguments['<input_file.html>']
-    output = arguments['<output_file.html>']
-    make_html_images_inline(input, output)
+    inputfile = arguments['<input_file.html>']
+    outputfile = arguments['<output_file.html>']
+    make_html_images_inline(inputfile, outputfile)

@@ -44,7 +44,8 @@ def url_to_base64(url):
 def splitme(string):
     "Splits a string"
     if string[0] == "\\":
-        return string[1:]
+        string = string[1:]
+    return string
 
 def make_html_images_inline(in_filepath, out_filepath):
     """
