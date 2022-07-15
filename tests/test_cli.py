@@ -2,7 +2,7 @@ from mock import MagicMock
 from pystandalonehtml import cli
 
 def test_cli():
-    # Prepare
+    "Testing Command line"
     cli.docopt = MagicMock(return_value={
         '<input_file.html>':'value1',
         '<output_file.html>':'value2',
