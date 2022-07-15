@@ -23,9 +23,7 @@ jobs:
       run: |
         tox
         echo "[1 ]Running lint process in pystandalon-html/"
-        pylint pystandalon-html/*.py
-        echo "[1 ]Running lint process in test/"
-        pylint 'test/*.py'
+        pylint pystandalon-html/
     - name: Second Testing
       run:
         find . -name 'pystandalon-html/*.py' -exec pylint {} \;
