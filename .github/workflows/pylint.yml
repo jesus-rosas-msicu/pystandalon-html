@@ -22,11 +22,10 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         tox
-        echo "[1 ]Running lint process in pystandalon-html/"
-        pylint pystandalonehtml/
+        echo "[1 ]Running lint process in pystandalonehtml/"
     - name: Second Testing
       run:
-        find . -name 'pystandalon-html/*.py' -exec pylint {} \;
+        find . -name 'pystandalonehtml/*.py' -exec pylint {} \;
     - name: Test
       run:
         echo "[R] Running unit test"
