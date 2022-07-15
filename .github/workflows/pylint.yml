@@ -23,7 +23,6 @@ jobs:
         pip install bs4
     - name: Analysing the code with pylint
       run:  |
-        tox
         echo "[1 ]Running lint process in pystandalonehtml/"
         pylint pystandalonehtml/
     - name: Second Testing
