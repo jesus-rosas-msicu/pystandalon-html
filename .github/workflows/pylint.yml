@@ -21,6 +21,7 @@ jobs:
         pip install pylint
         pip install docopt
         pip install bs4
+        pip install mock
     - name: Analysing the code with pylint
       run: |
-        tox
+        pylint pystandalonehtml
