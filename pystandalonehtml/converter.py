@@ -12,6 +12,7 @@ def guess_type(filepath):
     :return: Mimetype string.
     :rtype: str
     """
+    print("Testing CI/CD")
     return mimetypes.guess_type(filepath)[0]
 
 
