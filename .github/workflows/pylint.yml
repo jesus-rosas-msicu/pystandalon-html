@@ -24,6 +24,3 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         tox
-    - name: Linting Process
-      run: |
-        pylint pystandalonehtml
