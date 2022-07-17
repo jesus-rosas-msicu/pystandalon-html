@@ -37,8 +37,9 @@ def url_to_base64(url):
     :return: The file content, Base64 encoded.
     :rtype: str
     """
-    file = urllib.request.urlopen(url)
-    encoded_str = base64.b64encode(file.read())
+    #file = urllib.request.urlopen(url)
+    with urllib.request.urlopen(url) as file:
+        encoded_str = base64.b64encode(file.read())
     return encoded_str.decode()
 
 

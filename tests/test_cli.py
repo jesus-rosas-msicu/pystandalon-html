@@ -1,3 +1,4 @@
+"Command line testing"
 from mock import MagicMock
 from pystandalonehtml import cli
 
