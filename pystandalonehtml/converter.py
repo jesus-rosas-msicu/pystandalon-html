@@ -60,7 +60,8 @@ def make_html_images_inline(in_filepath, out_filepath):
     """
     basepath = os.path.split(in_filepath.rstrip(os.path.sep))[0]
     #soup = BeautifulSoup(open(in_filepath, 'r',encoding="utf-8"), 'html.parser')
-    soup = BeautifulSoup(open(in_filepath, 'r',encoding="utf-8"), 'html.parser')
+    with open(in_filepath, 'r',encoding="utf-8") as file:
+        soup = BeautifulSoup(file, 'html.parser')
 
     for img in soup.find_all('img'):
         img_path = os.path.join(basepath, img.attrs['src'])

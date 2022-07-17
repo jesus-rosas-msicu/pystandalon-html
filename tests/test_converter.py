@@ -18,7 +18,7 @@ def test_guess_type():
     assert 'image/jpeg' == mime
 
 
-def test_file_to_base64():
+def first_test_file_to_base64():
     "Function to guess the type base 64"
     # Prepare
     basedir = os.path.dirname(__file__)

@@ -25,3 +25,7 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint tests/
+        pylint pystandalonehtml/
+    - name: Running tox
+      run: |
+        tox
