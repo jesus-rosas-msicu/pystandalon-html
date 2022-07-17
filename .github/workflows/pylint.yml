@@ -24,4 +24,4 @@ jobs:
         pip install mock
     - name: Analysing the code with pylint
       run: |
-        pylint pystandalonehtml
+        pylint tests/

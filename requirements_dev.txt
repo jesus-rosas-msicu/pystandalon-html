@@ -16,4 +16,3 @@ pylint
 jedi
 bs4
 docopt
-mock
