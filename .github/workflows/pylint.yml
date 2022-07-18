@@ -33,6 +33,9 @@ jobs:
     - name: Testing and Reporting with tox
       run: |
         tox --result-json reports/report.json
+    - name: Generating artifacts
+      run: |
+        python setup.py bdist_wheel
     - name: Publish package to TestPyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
