@@ -16,3 +16,4 @@ pylint
 jedi
 bs4
 docopt
+html-testRunner

@@ -18,10 +18,10 @@ SETUP_REQUIREMENTS = ["pytest-runner"]
 TEST_REQUIREMENTS = ["pytest", "pytest-cov"]
 
 setup(
-    author="Victor Cabello",
-    author_email="vmeca87@gmail.com",
+    author="Jesus Rosas",
+    author_email="licrscjarp@gmail.com",
     classifiers=[
-        "Development Status :: 2 - Pre-Alpha",
+        "Development Status :: 3 - Pre-Alpha",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
@@ -39,12 +39,12 @@ setup(
     long_description=README + "\n\n" + HISTORY,
     include_package_data=True,
     keywords="html to single html",
-    name="pystandalonehtml",
-    packages=find_packages(include=["pystandalonehtml"]),
+    name="pystandalonehtml-hunger-games",
+    packages=find_packages(include=["pystandalonehtml-hunger-games"]),
     setup_requires=SETUP_REQUIREMENTS,
     test_suite="tests",
     tests_require=TEST_REQUIREMENTS,
-    url="https://github.com/victorcabello/pystandalonehtml",
+    url="https://github.com/jesus-rosas-msicu/pystandalon-html",
     version="0.1.10",
     zip_safe=False,
 )

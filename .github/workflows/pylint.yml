@@ -22,10 +22,22 @@ jobs:
         pip install docopt
         pip install bs4
         pip install mock
+        pip install html-testRunner
+        pip install xmlrunner
+        pip install wheel
+        pip install twine
     - name: Analysing the code with pylint
       run: |
         pylint tests/
         pylint pystandalonehtml/
-    - name: Running tox
+    - name: Testing and Reporting with tox
       run: |
-        tox
+        tox --result-json reports/report.json
+    - name: Deploying to pipy
+      run: |
+        echo "Ddeploying to pipy"
+    - name: Publish a Python distribution to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}

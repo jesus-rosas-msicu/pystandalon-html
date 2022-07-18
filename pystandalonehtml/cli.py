@@ -11,7 +11,9 @@ Options:
     -v --version  Show version.
 """
 from docopt import docopt
+#from .converter import make_html_images_inline
 from .converter import make_html_images_inline
+
 
 def main():
     """Main Function of the code."""
