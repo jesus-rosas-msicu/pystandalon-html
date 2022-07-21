@@ -45,6 +45,6 @@ setup(
     test_suite="tests",
     tests_require=TEST_REQUIREMENTS,
     url="https://github.com/jesus-rosas-msicu/pystandalon-html",
-    version="0.1.12",
+    version="0.1.13",
     zip_safe=False,
 )
